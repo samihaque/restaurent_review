@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1>Adding a Header to my app!😮‍💨</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Adding a Header to my app!😮‍💨</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
