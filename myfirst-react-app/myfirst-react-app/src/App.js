@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import sayHello from './component/hello'
+import Hello from './component/hello'
 
 function App() {
   let name = "sam"
@@ -13,7 +13,13 @@ function App() {
         <p>
           yoo!! {name} is excided to hack in react.
         </p>
-        {sayHello()}
+        <div>
+          <Hello name = {'Sami'}/>
+          <Hello name = {'Cameron'}/>
+          <Hello name = {'Ubaydul'}/>
+          <Hello name = {'Iffat'}/>
+        </div>
+        
         <a
           className="App-link"
           href="https://reactjs.org"

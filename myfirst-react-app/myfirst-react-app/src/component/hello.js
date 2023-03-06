@@ -1,14 +1,13 @@
-let sayHello=()=>{
+let Hello=(props)=>{
     let message ="hello"
     console.log(message)
     return (
       <div >
         <h3 >{message}</h3>
-        <p>This is sami here.....</p>
-        <p>Writing from another file</p>
+        <p>This is {props.name} here.....</p>
       </div>
   
     )
   }
 
-  export default sayHello
+  export default Hello
