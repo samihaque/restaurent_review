@@ -1,10 +1,13 @@
 let Hello=(props)=>{
     let message ="hello"
+    let firstName = props.name.firstName
+    let lastName = props.name.lastName
     console.log(message)
     return (
+      
       <div >
-        <h3 >{message}</h3>
-        <p>This is {props.name} here.....</p>
+       
+        <p>{message} This is {firstName} {lastName} here.....</p>
       </div>
   
     )
