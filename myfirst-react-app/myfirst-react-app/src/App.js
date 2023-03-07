@@ -37,8 +37,8 @@ function App() {
         <div>
           <Hello name= {student1}/>
           <Hello name= {student2}/>
-          <Hello name= {student2}/>
           <Hello name= {student3}/>
+          <Hello name= {student4}/>
         </div>
         {/* <div>
           <Message author = {'Sami'} content = {'Glad that I can bother you guys'}/>
