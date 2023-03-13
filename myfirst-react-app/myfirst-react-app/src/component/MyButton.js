@@ -1,8 +1,14 @@
 
 
-function MyButton(){
+function MyButton(props){
+
+    const handleClick=()=>{
+        alert('Clicked!')
+        props.onButtonClicked(props.text)
+    }
+
     return(
-        <button>MyButton!</button>
+        <button onClick={handleClick}>{props.text}</button>
     )
 }
 

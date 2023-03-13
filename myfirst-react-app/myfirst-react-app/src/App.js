@@ -61,15 +61,50 @@
 
 
 // export default App;
-
+import { useState } from "react";
 import MyButton from "./component/MyButton";
+import './App.css';
+import SignUp from "./component/SignUp";
+import Login from "./component/Login";
+import Welcome from "./component/Welcome";
 
 function App(){
+
+  const [buttonClicked, setButtonClicked] = useState(null)
+  const notifyClickStatus=(text)=>{
+    console.log('Something got clicked')
+    console.log('what got clicked: ', text)
+
+    setButtonClicked(text)
+  }
+
+  const renderPage=()=>{
+    console.log('in renderPage')
+      if (buttonClicked === 'Login!'){
+        return <Login />
+      }
+      else if (buttonClicked === 'Sign Up!'){
+        return <SignUp />
+      }
+        
+      else{
+        return (<div>
+          <h1>What's up</h1>
+          <p>Click to get started</p>
+          <MyButton text={"Login!"} onButtonClicked = {notifyClickStatus}/>
+
+          <p>Or sign up for an account</p>
+          <MyButton text={"Sign Up!"} onButtonClicked = {notifyClickStatus}/>
+        </div>
+        )
+      }
+    
+  }
+
   // should return some jsx
   return(
-    <div>
-      <h1>Hi this is Main component</h1>
-      <MyButton />
+    <div class="App">
+      {renderPage()}
     </div>
   )
 }
