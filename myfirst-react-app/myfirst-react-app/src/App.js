@@ -90,7 +90,7 @@ function App(){
       else{
         return (<div>
           <h1>What's up</h1>
-          <p>Click to get started</p>
+          <p>Click below to get started</p>
           <MyButton text={"Login!"} onButtonClicked = {notifyClickStatus}/>
 
           <p>Or sign up for an account</p>

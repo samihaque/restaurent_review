@@ -4,7 +4,7 @@ const Dashboard=()=>{
         <div>
             <h1>This is my Dashboard</h1>
             <p>Here is our messages</p>
-            <div><Message content = "Hello World" author = "cam"/></div>
+            <div><Message content = "Testing Message" author = "cam"/></div>
         </div>
     )
 }
