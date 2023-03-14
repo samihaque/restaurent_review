@@ -3,7 +3,7 @@
 function MyButton(props){
 
     const handleClick=()=>{
-        alert('Clicked!')
+        alert(`Going to -> ${props.text} page`)
         props.onButtonClicked(props.text)
     }
 

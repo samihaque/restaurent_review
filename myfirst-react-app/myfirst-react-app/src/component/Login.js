@@ -1,7 +1,9 @@
+import Dashboard from "./Dashboard"
+
 const Login =()=>{
     return(
         <div>
-            Login!
+            <Dashboard />
         </div>
     )
 }
