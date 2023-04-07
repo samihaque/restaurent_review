@@ -71,6 +71,7 @@ import Welcome from "./component/Welcome";
 function App(){
 
   const [buttonClicked, setButtonClicked] = useState(null)
+
   const notifyClickStatus=(text)=>{
     console.log('Something got clicked')
     console.log('what got clicked: ', text)
@@ -103,7 +104,7 @@ function App(){
 
   // should return some jsx
   return(
-    <div class="App">
+    <div className="App">
       {renderPage()}
     </div>
   )
