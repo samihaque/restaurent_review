@@ -16,6 +16,16 @@ const Dashboard=()=>{
         }
     }, [])
 
+    useEffect(()=>{
+        console.log('state changed', messages)
+    },[messages])
+
+    // clear cache for local storage
+
+    useEffect(()=>{
+        localStorage.clear()
+    }, [])
+
     let newMessageNotification = (newMessage)=>{
         // let addedMessages = messages
         // addedMessages.push(newMessage)
