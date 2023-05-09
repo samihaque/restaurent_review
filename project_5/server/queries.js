@@ -14,6 +14,27 @@ const pool = new POOL({
 
 // Create new link in the DB
 
+const createLinks = (req, res)=>{
+    const name= req.body.name
+    const url = req.body.url
+    if(name && url){
+        pool.query(
+            'INSERT INTO links (name, url) VALUES ($1, $2)',
+            [name, url], 
+            (error, result)=>{
+                if(error){
+                    throw error;
+                }
+                console.log(res)
+                res.status(201).send(`Link added with ID: ${result.insertId}`)
+            },
+        )
+    }
+    else{
+        res.status(403).send("Server is expecting data object with name & url parameter")
+    }
+    
+}
 
 
 // Read all the data from DB
@@ -38,5 +59,6 @@ const getLinks = (req, res)=>{
 
 module.exports = {
     getLinks,
+    createLinks,
     
 } 
