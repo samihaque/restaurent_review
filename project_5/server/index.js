@@ -34,7 +34,7 @@ app.get('/links', db.getLinks)
 
 // UPDATE - update data in DB
 // DELETE - remove data from a DB
-
+app.delete('/links/:id', db.deleteLink);
 
 
 app.listen(PORT, () => {
