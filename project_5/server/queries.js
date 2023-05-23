@@ -55,21 +55,10 @@ const getLinks = (req, res)=>{
 
 // Delete link from the DB
 
-const deleteLink = async (req, res) => {
-    const id = parseInt(req.params.id);
-    try {
-      const client = await pool.connect();
-      await client.query('DELETE FROM links WHERE id = $1', [id]);
-      client.release();
-      res.sendStatus(204);
-    } catch (error) {
-      console.error('Error executing query', error);
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  };
+
 
 module.exports = {
     getLinks,
     createLinks,
-    deleteLink,
+    
 } 
